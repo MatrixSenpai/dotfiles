@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/Users/pcoffey/Sites/applications/g.e.t/sites/all'
+let g:netrw_dirhist_2='/Users/pcoffey/Sites/applications/g.e.t/sites/all/modules/get/product_search'
+let g:netrw_dirhist_3='/Users/pcoffey/Sites/applications/g.e.t/sites/all/themes/BaseBuildingBlocks'
+let g:netrw_dirhist_4='/Users/pcoffey/Sites/applications/fahrentrack/frontend'
+let g:netrw_dirhist_5='/Users/pcoffey/Sites/applications/fahrentrack/frontend/config'
+let g:netrw_dirhist_6='/Users/pcoffey/Sites/applications/fahrentrack/OpenVBX'
+let g:netrw_dirhist_7='/Users/pcoffey/Sites/applications/fahrentrack/OpenVBX/controllers'
+let g:netrw_dirhist_8='/Users/pcoffey/Sites/applications/fahrentrack/frontend/views/templates'
+let g:netrw_dirhist_9='/Users/pcoffey/Sites/applications/fahrentrack/plugins/fahrentrack'
