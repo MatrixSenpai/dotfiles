@@ -24,6 +24,11 @@ set guifont=Bitstream\ Vera\ Sans\ Mono\ 9
 colorscheme Tomorrow-Night
 set list listchars=tab:→\ ,trail:·
 
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+
 "Misc
 set showmatch
 set nowrap
@@ -52,6 +57,10 @@ set smartcase
 set laststatus=2
 set statusline=\%L%m%r%h\ %w\ \ pwd:\ %r%{getcwd()}%h\ \ \ Line:\ %l
 
+"Scrolling
+:map <C-U> <C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y>
+:map <C-D> <C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E>
+
 "Pasting
 noremap <leader>p :set paste<CR>"*p<CR>:set nopaste<CR>
 noremap <leader>P :set paste<CR>"*P<CR>:set nopaste<CR>
@@ -62,6 +71,10 @@ set rtp+=~/.vim/bundle/vundle/
 
 Bundle 'gmarik/vundle'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'guns/vim-clojure-static'
+Bundle 'tpope/vim-fireplace'
+Bundle 'jpalardy/vim-slime'
+Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'groenewege/vim-less'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'django.vim'
@@ -101,3 +114,4 @@ au BufWritePost .vimrc so ~/.vimrc
 
 " Clean whitespace
 map <leader>s  :%s/\s\+$//<cr>:let @/=''<CR>
+
