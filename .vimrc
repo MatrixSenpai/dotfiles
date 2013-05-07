@@ -77,6 +77,8 @@ Bundle 'jpalardy/vim-slime'
 Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'groenewege/vim-less'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'kien/ctrlp.vim.git'
+
 Bundle 'django.vim'
 Bundle 'php.vim'
 
