@@ -93,6 +93,10 @@ mysql-push-staging() {
   mysqldump -u root -proot $1 | ssh web1 wp-sql-exec -e staging $1
 }
 
+# Now that's how I like my git logs!
+gitlog() {
+  git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+}
 
 
 #Browser Files/Cleanup
