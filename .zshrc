@@ -37,23 +37,6 @@ source $ZSH/oh-my-zsh.sh
 #export PATH=/usr/local/sbin:/usr/local/bin:$PATH
 export NODE_PATH=/usr/local/lib/node_modules
 
-#Mysql Management
-alias startsql="mysql.server start"
-alias stopsql="mysql.server stop"
-alias editmysqlconf="/usr/local/Cellar/mysql/5.5.25a/bin/mysql_secure_installation"
-
-#apache Management
-alias restarta="sudo apachectl graceful"
-alias starta="sudo apachectl start"
-alias stopa="sudo apachectl stop"
-alias startsolr="cd /usr/local/Cellar/solr/3.6.1/libexec/example; java -jar start.jar"
-
-#Edit Files
-alias editvhosts="sudo vim /etc/apache2/extra/httpd-vhosts.conf"
-alias edithost="sudo vim /etc/hosts"
-alias editaconf="sudo vim /etc/apache2/httpd.conf"
-alias editphpconf="sudo vim /etc/php.ini"
-
 #projects
 opensite() {
   echo "Opening $@"
@@ -97,9 +80,4 @@ mysql-push-staging() {
 gitlog() {
   git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 }
-
-
-#Browser Files/Cleanup
-alias viewDownloadHistory="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'select LSQuarantineDataURLString from LSQuarantineEvent'"
-alias deleteDownloadHistory="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
 
