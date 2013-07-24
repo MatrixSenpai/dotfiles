@@ -20,6 +20,10 @@ set undodir=~/.vim/undo
 set undoreload=10000
 
 "Styling
+if $COLORTERM == 'gnome-terminal'
+  set t_Co=256
+endif
+
 set guifont=Bitstream\ Vera\ Sans\ Mono\ 9
 colorscheme Tomorrow-Night
 set list listchars=tab:→\ ,trail:·
