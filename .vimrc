@@ -79,10 +79,9 @@ Bundle 'guns/vim-clojure-static'
 Bundle 'tpope/vim-fireplace'
 Bundle 'jpalardy/vim-slime'
 Bundle 'kien/rainbow_parentheses.vim'
-Bundle 'groenewege/vim-less'
+Bundle 'lunaru/vim-less'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'kien/ctrlp.vim.git'
-
 Bundle 'django.vim'
 Bundle 'php.vim'
 
@@ -103,6 +102,9 @@ au BufRead,BufNewFile *.js set ft=javascript syntax=javascript
 au BufRead,BufNewFile *.json set ft=json syntax=javascript
 au BufRead,BufNewFile *.twig set ft=htmldjango
 au BufRead,BufNewFile *.rabl set ft=ruby
+
+"Less
+nnoremap ,m :w <BAR> !lessc % > %:t:r.css<CR><space>
 
 "Syntastic
 let g:syntastic_enable_signs = 1
