@@ -1,44 +1,40 @@
-# Path to your oh-my-zsh configuration.
+#zsh conf
 ZSH=$HOME/.oh-my-zsh
 
-#Theme
+#theme
 ZSH_THEME="robbyrussell"
 DISABLE_LS_COLORS="false"
 DISABLE_AUTO_TITLE="false"
 COMPLETION_WAITING_DOTS="true"
 export TERM=xterm-256color 
 
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
+#plugins
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-#Nodejs
+#nodejs
 export NODE_PATH=/usr/local/lib/node_modules
 
 #vim
 export VISUAL=vim
 export EDITOR=vim
 
-# Coda
-export CODA_PATH=/Applications/Coda\ 2.app
-coda () {
+#git
+alias gitlog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
-for var in "$@"
-  do
-  if [[ -d $var ]]
-    then
-    echo $var
-    ls $var | grep "\(htm\|html\|css\|php\|txt\|js\|coffee\|py\|rb\|sh\|ini\|conf\)$" | xargs -I {} open -a "$CODA_PATH" "$var/"{}
-  else
-    open -a "$CODA_PATH" $var
-  fi
-  done
+#nginx
+alias nginxlog="sudo tail -f /var/log/nginx/error.log"
+
+#nautlius
+alias n="nautilus ."
+
+#project navigation
+opensite() {
+  echo "Opening $@"
+  cd /usr/share/nginx/html/$@
 }
-
-#Git
-gitlog() {
-  git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+openproject() {
+  echo "Opening $@"
+  cd ~/Projects/$@
 }
-
