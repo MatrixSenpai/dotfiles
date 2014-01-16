@@ -13,21 +13,21 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+
 #nodejs
 export NODE_PATH=/usr/local/lib/node_modules
+
 
 #vim
 export VISUAL=vim
 export EDITOR=vim
 
-#git
-alias gitlog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+#aliases
+alias gitlog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit" #Pretty git log
+alias nginxlog="sudo tail -f /var/log/nginx/error.log" #Nginx log shortcut
+alias n="nautilus ." #Open current dir in nautilus
+alias cb="xclip -sel clip" #Pipe to clipboard shortcut. (Usage: command | cb)
 
-#nginx
-alias nginxlog="sudo tail -f /var/log/nginx/error.log"
-
-#nautlius
-alias n="nautilus ."
 
 #project navigation
 opensite() {
