@@ -1,4 +1,4 @@
-These are my dotfiles. Should work with Ubuntu 12.x - Ubuntu 13.10, using zsh
+These are my dotfiles. Should work with Ubuntu 12.x - Ubuntu 13.10, using zsh.
 
 #Installation
 
@@ -11,10 +11,13 @@ These are my dotfiles. Should work with Ubuntu 12.x - Ubuntu 13.10, using zsh
 
 ##Intended to be used with:
 ###zsh, oh-my-zsh
-I reccomend using zsh and 0h-my-zsh. If you don't have it installed already run:
+I reccomend using zsh and oh-my-zsh. If you don't have them installed already, run:
  - <code>sudo apt-get update && sudo apt-get install zsh</code> - Installs zsh
  - <code>chsh -s /bin/zsh</code> - Sets zsh as your default shell
- - <code>curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh</code> - Installs Robby Russel's oh-my-zsh
+ - <code>curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh</code> - Installs oh-my-zsh
+
+###vim
+I use vim as my code editor. This project includes a nice vim config, and vundle setup, so you can extend to your hearts content.
 
 ###Nginx
 I end up using Nginx a lot, and so the nginx folder includes a wildcard conf file that I like to use for php projects. The <code>.zshrc</code> file contains some nginx aliases as well :) Of course you don't have to use nginx to use these dotfiles.
