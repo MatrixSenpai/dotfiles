@@ -88,6 +88,19 @@ set hlsearch                                                             " highl
 set incsearch                                                            " search as you type
 
 
+" backup and undo files
+set nobackup
+set nowritebackup
+set noswapfile
+set backupdir=$HOME/.vim/backup
+set backupcopy=yes
+set backupskip=/tmp/*,$TMPDIR/*,$TMP/*,$TEMP/*
+set directory=~/.vim/swap,~/tmp,.      " keep swp files under ~/.vim/swap
+set undofile
+set undodir=~/.vim/undo
+set undoreload=10000
+
+
 " editor styling
 if $COLORTERM == 'gnome-terminal'
   set t_Co=256
