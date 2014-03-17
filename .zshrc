@@ -27,14 +27,3 @@ alias gitlog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Cres
 alias nginxlog="sudo tail -f /var/log/nginx/error.log" #Nginx log shortcut
 alias n="nautilus ." #Open current dir in nautilus
 alias cb="xclip -sel clip" #Pipe to clipboard shortcut. (Usage: command | cb)
-
-
-#project navigation
-opensite() {
-  echo "Opening $@"
-  cd /usr/share/nginx/html/$@
-}
-openproject() {
-  echo "Opening $@"
-  cd ~/Projects/$@
-}
