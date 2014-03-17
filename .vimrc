@@ -1,8 +1,8 @@
-set nocompatible                                                         " we don't give a crap about vi
-syntax on                                                                " turn on syntax highlighting
+set nocompatible                     " we don't give a crap about vi
+syntax on                            " turn on syntax highlighting
 
 " vundle
-filetype on                                                              " avoid zero exit status
+filetype on                          " avoid zero exit status
 filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -95,7 +95,7 @@ set noswapfile
 set backupdir=$HOME/.vim/backup
 set backupcopy=yes
 set backupskip=/tmp/*,$TMPDIR/*,$TMP/*,$TEMP/*
-set directory=~/.vim/swap,~/tmp,.      " keep swp files under ~/.vim/swap
+set directory=~/.vim/swap,~/tmp,.                                        " keep swp files under ~/.vim/swap
 set undofile
 set undodir=~/.vim/undo
 set undoreload=10000
