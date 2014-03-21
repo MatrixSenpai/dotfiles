@@ -1,8 +1,8 @@
-set nocompatible                     " we don't give a crap about vi
-syntax on                            " turn on syntax highlighting
+set nocompatible
+syntax on
 
 " vundle
-filetype on                          " avoid zero exit status
+filetype on
 filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -26,7 +26,6 @@ Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'nono/vim-handlebars'
 Bundle 'pangloss/vim-javascript'
 Bundle 'php.vim'
-Bundle 'wookiehangover/jshint.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
 Bundle 'slim-template/vim-slim'
@@ -47,8 +46,6 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'vim-scripts/Align'
 Bundle 'vim-scripts/greplace.vim'
 Bundle 'vim-scripts/matchit.zip'
-
-filetype plugin indent on
 
 
 " code formatting
@@ -149,6 +146,7 @@ map <leader>s  :%s/\s\+$//<cr>:let @/=''<CR>
 
 
 " filetypes
+filetype plugin indent on
 autocmd BufRead,BufNewFile *.fdoc set filetype=yaml
 autocmd BufRead,BufNewFile *.md set filetype=markdown
 autocmd BufRead,BufNewFile *.md set spell
