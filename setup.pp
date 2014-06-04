@@ -4,8 +4,6 @@
 #   acme-ohmyzsh
 #   puppetlabs-apt
 
-include apt
-
 #
 # Settings Variables
 #
@@ -55,6 +53,22 @@ package { "curl":
   ensure => "installed"
 }
 
+# chrome
+package { "chromium-browser":
+  ensure => "installed"
+}
+package { "flashplugin-nonfree":
+  ensure => "installed"
+}
+file { "/usr/lib/flashplugin-installer/libflashplayer.so":
+  ensure => "link",
+  target => "/usr/lib/chromium-browser/plugins"
+}
+exec { "chromium_add_plugin":
+  command => "chromium-browser --enable-plugins",
+  path => "/usr/lib/chromium-browser"
+}
+
 # development tools
 package { "git":
   ensure => "installed"
@@ -89,8 +103,8 @@ package { "php5-pear":
   ensure => "installed"
 }
 
-#nginx
-package { "nginx":
+#apache2
+package { "apache2":
   ensure => "installed"
 }
 
