@@ -12,6 +12,7 @@ Bundle 'austintaylor/vim-indentobject'
 Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'django.vim'
+Bundle 'fatih/vim-go'
 Bundle 'gmarik/vundle'
 Bundle 'juvenn/mustache.vim'
 Bundle 'kchmck/vim-coffee-script'
@@ -76,6 +77,7 @@ set report=0                                                             " Alway
 set ruler                                                                " show line and column number of cursor
 set cursorline                                                           " higlight screen line of the cursor
 set scrolloff=4                                                          " scroll offset
+let g:go_disable_autoinstall = 1                                         " disable autoinstall for vim-go
 
 
 " search
@@ -146,6 +148,7 @@ map <leader>s  :%s/\s\+$//<cr>:let @/=''<CR>
 
 
 " filetypes
+set rtp+=$GOROOT/misc/vim
 filetype plugin indent on
 autocmd BufRead,BufNewFile *.fdoc set filetype=yaml
 autocmd BufRead,BufNewFile *.md set filetype=markdown
@@ -154,6 +157,7 @@ autocmd BufRead,BufNewFile *.module set filetype=php
 autocmd BufRead,BufNewFile *.install set filetype=php
 autocmd BufRead,BufNewFile *.test set filetype=php
 autocmd BufRead,BufNewFile *.inc set filetype=php
+autocmd BufRead,BufNewFile *.go set filetype=go
 autocmd BufRead,BufNewFile *.profile set filetype=php
 autocmd BufRead,BufNewFile *.view set filetype=php
 autocmd BufNewFile,BufRead *.less set filetype=less
