@@ -12,14 +12,17 @@ Bundle 'austintaylor/vim-indentobject'
 Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'django.vim'
+Bundle 'eventualbuddha/vim-protobuf'
 Bundle 'fatih/vim-go'
 Bundle 'gmarik/vundle'
+Bundle 'joonty/vdebug'
 Bundle 'juvenn/mustache.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/ctrlp.vim'
 Bundle 'leafgarland/typescript-vim'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'lunaru/vim-less'
+Bundle 'majutsushi/tagbar'
 Bundle 'mileszs/ack.vim'
 Bundle 'miripiruni/CSScomb-for-Vim'
 Bundle 'msanders/snipmate.vim'
@@ -42,7 +45,6 @@ Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-vividchalk'
-Bundle 'eventualbuddha/vim-protobuf'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'vim-scripts/Align'
 Bundle 'vim-scripts/greplace.vim'
@@ -72,6 +74,7 @@ set wildmode=longest,list,full
 set nowrap                                                               " no wrapping by default
 set showcmd                                                              " give info on current command
 set number                                                               " show line numbers
+set colorcolumn=80                                                       " Show vertical highlight at column 80
 set hidden                                                               " hide buffers instead of unloading them
 set report=0                                                             " Always report number of lines changed
 set ruler                                                                " show line and column number of cursor
@@ -107,6 +110,31 @@ endif
 
 set guifont=Bitstream\ Vera\ Sans\ Mono\ 9
 colorscheme Tomorrow-Night
+
+" vdebug settings
+let g:vdebug_options = {
+\  "port" : 9000,
+\  "server" : "192.168.232.1",
+\  "timeout" : 60,
+\  "on_close" : 'detach',
+\  "break_on_open" : 0,
+\    "ide_key" : '',
+\    "path_maps" : {
+\      "/mnt/hgfs/dcms" : "/Users/pcoffey/dcms",
+\    },
+\    "debug_window_level" : 0,
+\    "debug_file_level" : 0,
+\    "debug_file" : "",
+\    "watch_window_style" : 'compact',
+\    "marker_default" : '⬦',
+\    "marker_closed_tree" : '▸',
+\    "marker_open_tree" : '▾',
+\    "continuous_mode" : 1,
+\}
+let g:vdebug_features= {
+\  "max_depth" : 6,
+\  "max_children" : 128,
+\}
 
 
 " key mapping
