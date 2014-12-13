@@ -17,6 +17,8 @@ source $ZSH/oh-my-zsh.sh
 #nodejs
 export NODE_PATH=/usr/local/lib/node_modules
 
+#go
+export PATH=$PATH:$GOPATH/bin
 
 #vim
 export VISUAL=vim
