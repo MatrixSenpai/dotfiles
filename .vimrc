@@ -176,23 +176,33 @@ map <leader>s  :%s/\s\+$//<cr>:let @/=''<CR>
 set rtp+=$GOROOT/misc/vim
 filetype plugin indent on
 if has("autocmd")
-  augroup module
+  augroup php
     autocmd BufRead,BufNewFile *.module set filetype=php
     autocmd BufRead,BufNewFile *.install set filetype=php
     autocmd BufRead,BufNewFile *.test set filetype=php
     autocmd BufRead,BufNewFile *.inc set filetype=php
     autocmd BufRead,BufNewFile *.profile set filetype=php
     autocmd BufRead,BufNewFile *.view set filetype=php
+    autocmd BufRead,BufNewFile *.fdoc set filetype=yaml
+    autocmd BufRead,BufNewFile *.twig set ft=htmldjango
   augroup END
-  autocmd BufRead,BufNewFile *.fdoc set filetype=yaml
-  autocmd BufRead,BufNewFile *.md set filetype=markdown
-  autocmd BufRead,BufNewFile *.md set spell
-  autocmd BufRead,BufNewFile *.go set filetype=go
-  autocmd BufRead,BufNewFile *.view set filetype=php
-  autocmd BufNewFile,BufRead *.less set filetype=less
-  autocmd BufRead,BufNewFile *.js set ft=javascript syntax=javascript
-  autocmd BufRead,BufNewFile *.json set ft=json syntax=javascript
-  autocmd BufRead,BufNewFile *.twig set ft=htmldjango
-  autocmd BufRead,BufNewFile *.rabl set ft=ruby
+
+  augroup js
+    autocmd BufRead,BufNewFile *.js set ft=javascript syntax=javascript
+  augroup END
+
+  augroup markup
+    autocmd BufRead,BufNewFile *.md set filetype=markdown
+    autocmd BufRead,BufNewFile *.md set spell
+  augroup END
+
+  augroup frontend
+    autocmd BufNewFile,BufRead *.less set filetype=less
+  augroup END
+
+  augroup other
+    autocmd BufRead,BufNewFile *.go set filetype=go
+    autocmd BufRead,BufNewFile *.rabl set ft=ruby
+  augroup END
 endif
 nnoremap ,m :w <BAR> !lessc % > %:t:r.css<CR><space>
