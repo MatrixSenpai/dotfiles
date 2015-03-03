@@ -175,33 +175,24 @@ map <leader>s  :%s/\s\+$//<cr>:let @/=''<CR>
 " filetypes
 set rtp+=$GOROOT/misc/vim
 filetype plugin indent on
-autocmd BufRead,BufNewFile *.fdoc set filetype=yaml
-autocmd BufRead,BufNewFile *.md set filetype=markdown
-autocmd BufRead,BufNewFile *.md set spell
-autocmd BufRead,BufNewFile *.module set filetype=php
-autocmd BufRead,BufNewFile *.install set filetype=php
-autocmd BufRead,BufNewFile *.test set filetype=php
-autocmd BufRead,BufNewFile *.inc set filetype=php
-autocmd BufRead,BufNewFile *.go set filetype=go
-autocmd BufRead,BufNewFile *.profile set filetype=php
-autocmd BufRead,BufNewFile *.view set filetype=php
-autocmd BufNewFile,BufRead *.less set filetype=less
-autocmd BufRead,BufNewFile *.js set ft=javascript syntax=javascript
-autocmd BufRead,BufNewFile *.json set ft=json syntax=javascript
-autocmd BufRead,BufNewFile *.twig set ft=htmldjango
-autocmd BufRead,BufNewFile *.rabl set ft=ruby
-nnoremap ,m :w <BAR> !lessc % > %:t:r.css<CR><space>
-
-" plugin settings
-
-" Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
-if executable('ag')
-  let g:ackprg = 'ag --nogroup --column'
-
-  " Use Ag over Grep
-  set grepprg=ag\ --nogroup\ --nocolor
-
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+if has("autocmd")
+  augroup module
+    autocmd BufRead,BufNewFile *.module set filetype=php
+    autocmd BufRead,BufNewFile *.install set filetype=php
+    autocmd BufRead,BufNewFile *.test set filetype=php
+    autocmd BufRead,BufNewFile *.inc set filetype=php
+    autocmd BufRead,BufNewFile *.profile set filetype=php
+    autocmd BufRead,BufNewFile *.view set filetype=php
+  augroup END
+  autocmd BufRead,BufNewFile *.fdoc set filetype=yaml
+  autocmd BufRead,BufNewFile *.md set filetype=markdown
+  autocmd BufRead,BufNewFile *.md set spell
+  autocmd BufRead,BufNewFile *.go set filetype=go
+  autocmd BufRead,BufNewFile *.view set filetype=php
+  autocmd BufNewFile,BufRead *.less set filetype=less
+  autocmd BufRead,BufNewFile *.js set ft=javascript syntax=javascript
+  autocmd BufRead,BufNewFile *.json set ft=json syntax=javascript
+  autocmd BufRead,BufNewFile *.twig set ft=htmldjango
+  autocmd BufRead,BufNewFile *.rabl set ft=ruby
 endif
-
+nnoremap ,m :w <BAR> !lessc % > %:t:r.css<CR><space>
