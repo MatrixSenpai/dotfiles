@@ -74,7 +74,7 @@ set wildmode=longest,list,full
 set nowrap                                                               " no wrapping by default
 set showcmd                                                              " give info on current command
 set number                                                               " show line numbers
-set colorcolumn=80                                                       " Show vertical highlight at column 80
+set colorcolumn=20,24,34,36,38,40,60,80,120
 set hidden                                                               " hide buffers instead of unloading them
 set report=0                                                             " Always report number of lines changed
 set ruler                                                                " show line and column number of cursor
@@ -114,14 +114,11 @@ colorscheme Tomorrow-Night
 " vdebug settings
 let g:vdebug_options = {
 \  "port" : 9000,
-\  "server" : "192.168.232.1",
+\  "server" : "localhost",
 \  "timeout" : 60,
 \  "on_close" : 'detach',
 \  "break_on_open" : 0,
 \    "ide_key" : '',
-\    "path_maps" : {
-\      "/mnt/hgfs/dcms" : "/Users/pcoffey/dcms",
-\    },
 \    "debug_window_level" : 0,
 \    "debug_file_level" : 0,
 \    "debug_file" : "",
