@@ -17,8 +17,8 @@ source $ZSH/oh-my-zsh.sh
 #nodejs
 export NODE_PATH=/usr/local/lib/node_modules
 
-#go
-export PATH=$PATH:$GOPATH/bin
+#php
+export PATH=~/.composer/vendor/bin:$PATH
 
 #vim
 export VISUAL=vim
