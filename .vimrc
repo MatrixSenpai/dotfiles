@@ -74,7 +74,7 @@ set wildmode=longest,list,full
 set nowrap                                                               " no wrapping by default
 set showcmd                                                              " give info on current command
 set number                                                               " show line numbers
-set colorcolumn=20,24,34,36,38,40,60,80,120
+set colorcolumn=80
 set hidden                                                               " hide buffers instead of unloading them
 set report=0                                                             " Always report number of lines changed
 set ruler                                                                " show line and column number of cursor
