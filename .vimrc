@@ -50,7 +50,6 @@ Bundle 'vim-scripts/Align'
 Bundle 'vim-scripts/greplace.vim'
 Bundle 'vim-scripts/matchit.zip'
 
-
 " code formatting
 set autoindent                                                           " automatically indent on new lines
 set expandtab                                                            " expand tabs to spaces
@@ -58,7 +57,6 @@ set tabstop=8                                                            " actua
 set softtabstop=2                                                        " insert mode tab/backspace width
 set shiftwidth=2                                                         " normal mode (auto)indent width
 set backspace=2                                                          " improve the working of <BS>, <Del>, CTRL-W and CTRL-U in insert mode.
-
 
 " editor setup
 set autoread                                                             " reload files when they are updated
@@ -80,15 +78,18 @@ set report=0                                                             " Alway
 set ruler                                                                " show line and column number of cursor
 set cursorline                                                           " higlight screen line of the cursor
 set scrolloff=4                                                          " scroll offset
-let g:go_disable_autoinstall = 1                                         " disable autoinstall for vim-go
-
+let g:go_disable_autoinstall = 0                                         " enable autoinstall for vim-go
+let g:go_highlight_functions = 1                                         " turn on function highlighting for go
+let g:go_highlight_methods = 1                                           " turn on method highlighting for go
+let g:go_highlight_structs = 1                                           " turn on struct highlighting for go
+let g:go_highlight_operators = 1                                         " turn on operators highlighting for go
+let g:go_highlight_build_constraints = 1                                 " turn on build constraint highlighting for go
 
 " search
 set ignorecase                                                           " case-insensitive search
 set smartcase                                                            " case-sensitive search if query contains caps
 set hlsearch                                                             " highlight search results
 set incsearch                                                            " search as you type
-
 
 " backup and undo files
 set nobackup
@@ -101,7 +102,6 @@ set directory=~/.vim/swap,~/tmp,.                                        " keep 
 set undofile
 set undodir=~/.vim/undo
 set undoreload=10000
-
 
 " editor styling
 if $COLORTERM == 'gnome-terminal'
@@ -133,7 +133,6 @@ let g:vdebug_features= {
 \  "max_children" : 128,
 \}
 
-
 " key mapping
 let mapleader = ','
 map <C-h> <C-w>h
@@ -155,22 +154,17 @@ map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimr
 nmap Z :tabprev<CR>
 nmap X :tabnext<CR>
 
-
 " just in case you forgot to sudo
 cmap w!! %!sudo tee > /dev/null %
-
 
 " automatically jump to last known position in a file
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
-
 " automatically reload vimrc when it's saved
 au BufWritePost .vimrc so ~/.vimrc
 
-
 " automatically clean whitespace
 map <leader>s  :%s/\s\+$//<cr>:let @/=''<CR>
-
 
 " filetypes
 set rtp+=$GOROOT/misc/vim
@@ -200,9 +194,14 @@ if has("autocmd")
     autocmd BufNewFile,BufRead *.less set filetype=less
   augroup END
 
-  augroup other
-    autocmd BufRead,BufNewFile *.go set filetype=go
+  augroup rubylang
     autocmd BufRead,BufNewFile *.rabl set ft=ruby
+    autocmd BufRead,BufNewFile *.rb set ft=ruby
+  augroup END
+
+  augroup golang
+    autocmd BufRead,BufNewFile *.go set filetype=go
+    autocmd FileType go set tabstop=2|set shiftwidth=2|set noexpandtab|set nolist
   augroup END
 endif
 nnoremap ,m :w <BAR> !lessc % > %:t:r.css<CR><space>
