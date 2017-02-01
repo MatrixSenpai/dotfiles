@@ -26,9 +26,10 @@ alias n="nautilus ." #Open current dir in nautilus
 alias cb="xclip -sel clip" #Pipe to clipboard shortcut. (Usage: command | cb)
 
 #go
-export GOROOT=$HOME/go
+export GOPATH=$HOME/Projects/go
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
-export PATH=/usr/local/bin:$PATH
 
 #nvm
 export NVM_DIR="$HOME/.nvm"
