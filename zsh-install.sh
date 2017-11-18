@@ -7,3 +7,6 @@ else
 fi
 
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+sed -i -e 's/robbyrussell/agnoster/g' ~/.zshrc
+zsh
