@@ -2,7 +2,7 @@
 ZSH=$HOME/.oh-my-zsh
 
 #theme
-ZSH_THEME="robbyrussell"
+ZSH_THEME="agnoster"
 DISABLE_LS_COLORS="false"
 DISABLE_AUTO_TITLE="false"
 COMPLETION_WAITING_DOTS="true"

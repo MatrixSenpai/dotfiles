@@ -154,6 +154,10 @@ nmap <leader>c <Plug>Kwbd
 map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 nmap Z :tabprev<CR>
 nmap X :tabnext<CR>
+nmap q :wq<Enter>
+nmap Q :q!<Enter>
+nmap w :w<Enter>
+nmap tt :tabedit 
 
 " just in case you forgot to sudo
 cmap w!! %!sudo tee > /dev/null %
