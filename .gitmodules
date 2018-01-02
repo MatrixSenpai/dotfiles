@@ -4,3 +4,6 @@
 [submodule "fonts"]
 	path = fonts
 	url = https://github.com/powerline/fonts
+[submodule "terminator-solarized"]
+	path = terminator-solarized
+	url = https://github.com/ghuntley/terminator-solarized
