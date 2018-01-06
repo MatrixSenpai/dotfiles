@@ -7,3 +7,6 @@
 [submodule "terminator-solarized"]
 	path = terminator-solarized
 	url = https://github.com/ghuntley/terminator-solarized
+[submodule "github-matrix-screensaver"]
+	path = github-matrix-screensaver
+	url = https://github.com/winterbe/github-matrix-screensaver
