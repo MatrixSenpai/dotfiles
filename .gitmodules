@@ -10,3 +10,6 @@
 [submodule "github-matrix-screensaver"]
 	path = github-matrix-screensaver
 	url = https://github.com/winterbe/github-matrix-screensaver
+[submodule "solarized"]
+	path = solarized
+	url = https://github.com/altercation/solarized
