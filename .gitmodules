@@ -16,3 +16,6 @@
 [submodule "Solarized-Dark-for-Xcode"]
 	path = Solarized-Dark-for-Xcode
 	url = https://github.com/ArtSabintsev/Solarized-Dark-for-Xcode
+[submodule "JetBrainsMono"]
+	path = JetBrainsMono
+	url = https://github.com/JetBrains/JetBrainsMono
