@@ -1,3 +1,6 @@
 [submodule "JetBrainsMono"]
 	path = JetBrainsMono
 	url = https://github.com/JetBrains/JetBrainsMono
+[submodule "nvim-config"]
+	path = nvim-config
+	url = git@github.com:MatrixSenpai/nvim-config
